@@ -1,0 +1,220 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - YouTube API Project</title>
+    <style>
+        /* General reset to remove default margins and paddings */
+        
+
+        /* Container for homepage content */
+        .home-container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+            /* Heading style */
+            .home-container h1 {
+                font-size: 2.5rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            /* Paragraph style */
+            .home-container p {
+                font-size: 1.2rem;
+                color: #666;
+                margin-bottom: 30px;
+                line-height: 1.6;
+            }
+
+        /* Button styling */
+        .btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn:hover {
+                background-color: #0056b3;
+            }
+
+        /* Features Section */
+        .features-container {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+            .features-container h2 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+                color: #333;
+            }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .feature {
+            flex: 1;
+            margin: 0 15px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #007BFF;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .feature p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Testimonials Section */
+        .testimonials-container {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+            .testimonials-container h2 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+                color: #333;
+            }
+
+        .testimonial {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            text-align: right;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Call to Action Section */
+        .cta-container {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        
+            width: 100%;
+        }
+
+            .cta-container h2 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+            }
+
+            .cta-container p {
+                font-size: 1.2rem;
+                margin-bottom: 30px;
+            }
+
+            .cta-container .btn {
+                background-color: white;
+                color: #007BFF;
+                padding: 15px 30px;
+                border-radius: 5px;
+                font-size: 1.1rem;
+                transition: background-color 0.3s ease;
+            }
+
+                .cta-container .btn:hover {
+                    background-color: #f4f4f9;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="home-container">
+        <h1>Welcome to the YouTube Search Application</h1>
+        <p>
+            This application allows you to search YouTube for videos based on any keyword you provide.
+            Simply enter your search query on the search page, and the app will display results directly from YouTube.
+        </p>
+        <a href="/Youtube" class="btn">Go to Search Page</a>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-container">
+        <h2>Features of Our Application</h2>
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <h3>Search YouTube</h3>
+                <p>Quickly search YouTube videos with just a few clicks using our user-friendly search functionality.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h3>View Video Details</h3>
+                <p>Get detailed information about each video including titles, descriptions, and thumbnails.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast and Reliable</h3>
+                <p>Experience fast and reliable searches powered by the YouTube API, delivering results in real time.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials-container">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            "This app made it so easy for me to find videos for my research. The interface is clean and easy to use."
+            <div class="testimonial-author">- Alex Johnson</div>
+        </div>
+        <div class="testimonial">
+            "A must-have tool for anyone who regularly uses YouTube for video searches."
+            <div class="testimonial-author">- Sarah Lee</div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="cta-container">
+        <h2>Ready to Start Searching?</h2>
+        <p>Click the button below to begin exploring YouTube videos with our powerful search tool.</p>
+        <a href="/Youtube" class="btn">Start Searching</a>
+    </div>
+
+</body>
+</html>

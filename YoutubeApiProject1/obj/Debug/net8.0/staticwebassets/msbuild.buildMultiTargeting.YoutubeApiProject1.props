@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\YoutubeApiProject1.props" />
+</Project>

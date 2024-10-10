@@ -1,0 +1,38 @@
+﻿@model List<YouTubeApiProject1.Models.YouTubeVideoModel>
+
+<h2 style="text-align: center;">Search YouTube Videos</h2>
+
+
+<!-- Search form styling -->
+<form asp-action="Search" method="post" style="margin-bottom: 20px; text-align: center;">
+    <input type="text" name="query" placeholder="Search for videos..."
+           style="width: 60%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc;" />
+    <button type="submit" style="padding: 10px 20px; background-color: #4CAF50; color: white;
+            border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">
+        Search
+    </button>
+</form>
+
+<!-- Results section -->
+@if (Model != null && Model.Any())
+{
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+        @foreach (var video in Model)
+        {
+            <div style="border: 1px solid #ccc; border-radius: 8px; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <h3 style="font-size: 1.25em; color: #333;">@video.Title</h3>
+                <p style="color: #555;">@video.Description</p>
+                <img src="@video.ThumbnailUrl" alt="@video.Title" style="width: 100%; height: auto; border-radius: 8px;" />
+
+                <br />
+                <a href="@video.VideoUrl" target="_blank">
+                    <button type="button" style="margin-top: 10px; padding: 10px 15px; background-color: #2196F3; color: white;
+                        border: none; border-radius: 5px; cursor: pointer; font-size: 14px;"> Watch
+                    </button>
+                </a>
+             
+            </div>
+        }
+    </div>
+}
+
